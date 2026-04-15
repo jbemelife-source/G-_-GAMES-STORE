@@ -1,0 +1,3013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Premium consoles, accessories and exclusive gameplay experiences for gamers worldwide." />
+    <meta name="theme-color" content="#ff9800" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Goodlife Games" />
+    <link rel="icon" type="image/svg+xml" href="app-icon.svg" />
+    <link rel="apple-touch-icon" href="app-icon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="logo.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="logo.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="logo.png" />
+    <link rel="manifest" href="manifest.json" />
+    <title>Good life Games - Console, Accessories & Gameplay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f8fb;
+            color: #1a1a1a;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1180px, 94%);
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(90deg, #110f2f, #0b183a);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.7rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-img {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+        }
+
+        .logo-text span {
+            color: #ff9800;
+        }
+
+        .nav {
+            display: flex;
+            gap: 1.2rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .nav a:hover {
+            color: #ff9800;
+        }
+
+        .install-app-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #ff9800, #f57c00);
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        .install-app-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+            background: linear-gradient(135deg, #f57c00, #e65100);
+        }
+
+        .install-app-button:active {
+            transform: translateY(0);
+        }
+
+        .cart-button {
+            position: relative;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: rgba(255, 152, 0, 0.2);
+            border: 1px solid #ff9800;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cart-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+        }
+
+        .cart-button svg {
+            width: 1.1rem;
+            height: 1.1rem;
+            fill: #ff9800;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -0.25rem;
+            right: -0.35rem;
+            background-color: #ff3d00;
+            color: #fff;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 999px;
+            display: grid;
+            place-items: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .hero {
+            padding: 3.2rem 0 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(255, 152, 0, 0.18), transparent 45%),
+                radial-gradient(circle at 80% 80%, rgba(26, 26, 26, 0.20), transparent 55%),
+                url('Image/Web Flyer.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(4px);
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(247, 248, 251, 0.3);
+            z-index: 2;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            z-index: 3;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: clamp(1.9rem, 4vw, 3.4rem);
+            line-height: 1.1;
+            font-weight: 900;
+            max-width: 640px;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title .highlight {
+            color: #ff9800;
+        }
+
+        .hero-subtitle {
+            max-width: 560px;
+            font-size: 1.08rem;
+            line-height: 1.6;
+            margin-bottom: 1.4rem;
+            color: #444;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.25rem;
+            border: none;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: #ff9800;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.35);
+        }
+
+        .btn-secondary {
+            background-color: #fff;
+            color: #1f2a44;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        section.products {
+            padding: 2.5rem 0 3rem;
+        }
+
+        .section-heading {
+            font-size: 1.85rem;
+            margin-bottom: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            color: #585858;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(140px, 1fr));
+            gap: 1.1rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(23, 23, 30, 0.06);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        @media (max-width: 900px) {
+            .products-grid {
+                grid-template-columns: repeat(2, minmax(140px, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .products-grid {
+                grid-template-columns: repeat(2, minmax(120px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: repeat(2, minmax(110px, 1fr));
+            }
+        }
+
+        .quick-view-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .quick-view-modal {
+            width: min(96%, 100%);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 30px rgba(23, 23, 30, 0.12);
+        }
+
+        /* Infinite scroll sentinel */
+        #scroll-sentinel {
+            grid-column: 1 / -1;
+            height: 20px;
+            background: transparent;
+        }
+
+        .card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .product-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .product-category {
+            font-size: 0.82rem;
+            color: #777;
+            margin-bottom: 0.55rem;
+        }
+
+        .product-price {
+            font-size: 1.11rem;
+            font-weight: 700;
+            color: #ff6400;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-description {
+            display: none;
+        }
+
+        .product-action {
+            width: 100%;
+            border: 1px solid #1f2a44;
+            color: #1f2a44;
+            background-color: transparent;
+            border-radius: 8px;
+            padding: 0.55rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .product-action:hover {
+            background: #f8f8ff;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0b183a 0%, #110f2f 100%);
+            color: #dbe2ff;
+            padding: 3rem 0 1.5rem;
+            border-top: 1px solid rgba(255, 152, 0, 0.1);
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-section ul li a {
+            color: #bfd2ff;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ff9800;
+        }
+
+        .footer-section p {
+            font-size: 0.9rem;
+            color: #bfd2ff;
+            line-height: 1.6;
+        }
+
+        .footer-logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-logo span {
+            color: #ff9800;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 152, 0, 0.2);
+            border: 1px solid #ff9800;
+            border-radius: 8px;
+            color: #ff9800;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social-link:hover {
+            background-color: #ff9800;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .footer-social-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: #9fa8c5;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: #9fa8c5;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ff9800;
+        }
+
+        /* Loader Styles */
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(247, 248, 251, 0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(2px);
+        }
+
+        .loader-overlay.active {
+            display: flex;
+        }
+
+        .loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #e0e0e0;
+            border-top: 4px solid #ff9800;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .loader-text {
+            font-size: 1rem;
+            color: #1f2a44;
+            font-weight: 600;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Welcome Modal Styles */
+        .welcome-backdrop {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(4, 13, 28, 0.75);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 500;
+        }
+
+        .welcome-backdrop.active {
+            display: flex;
+        }
+
+        .welcome-modal {
+            width: min(90%, 500px);
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            padding: 2rem 1.5rem;
+            animation: modalPop 0.3s ease;
+            text-align: center;
+            position: relative;
+        }
+
+        .welcome-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border: none;
+            background: transparent;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s ease;
+        }
+
+        .welcome-close:hover {
+            background-color: #f0f0f0;
+        }
+
+        .welcome-icon {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .welcome-icon svg {
+            color: #ff9800;
+        }
+
+        .welcome-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1f2a44;
+            margin-bottom: 0.5rem;
+        }
+
+        .welcome-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .welcome-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .welcome-feature-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .welcome-feature-icon svg {
+            color: #ff9800;
+        }
+
+        .welcome-feature-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1f2a44;
+        }
+
+        .welcome-button {
+            background-color: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .welcome-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .header-inner {
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .hero-title {
+                font-size: 1.7rem;
+            }
+
+            .cart-button {
+                font-size: 0.82rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.96rem;
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            width: 54px;
+            height: 54px;
+            background-color: #25d366;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            display: grid;
+            place-items: center;
+            z-index: 200;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        .whatsapp-float img {
+            width: 28px;
+            height: 28px;
+            filter: brightness(0) invert(1);
+        }
+
+        .cart-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(4, 13, 28, 0.55);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 300;
+        }
+
+        .cart-modal-backdrop.active {
+            display: flex;
+        }
+
+        .cart-modal {
+            width: min(92%, 420px);
+            background-color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            padding: 1rem;
+            animation: modalPop 0.22s ease;
+        }
+
+        .quick-view-backdrop {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(4, 13, 28, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 310;
+        }
+
+        .quick-view-backdrop.active {
+            display: flex;
+        }
+
+        .quick-view-modal {
+            width: min(92%, 700px);
+            max-width: 700px;
+            background-color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 24px 45px rgba(0, 0, 0, 0.35);
+            padding: 1rem;
+            animation: modalPop 0.22s ease;
+            overflow: hidden;
+            max-height: 90vh;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        .quick-view-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .quick-view-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .quick-view-content h4 {
+            margin: 0 0 0.65rem;
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .quick-view-content p {
+            margin: 0 0 0.6rem;
+            color: #5d637a;
+            line-height: 1.5;
+        }
+
+        .quick-view-price {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #ff6400;
+        }
+
+        .quick-view-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cart-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.85rem;
+        }
+
+        .cart-modal-header h3 {
+            font-size: 1.22rem;
+            margin: 0;
+        }
+
+        .cart-close {
+            border: none;
+            background: transparent;
+            font-size: 1.35rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .cart-items {
+            max-height: 280px;
+            overflow-y: auto;
+            margin-bottom: 0.9rem;
+            border-radius: 10px;
+            border: 1px solid #e6e8f3;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 0.65rem;
+            align-items: center;
+            padding: 0.7rem 0.8rem;
+            border-bottom: 1px solid #f1f3fa;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cart-item-details p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: #434a5d;
+        }
+
+        .cart-item .price {
+            font-weight: 700;
+            color: #ff6400;
+        }
+
+        .cart-item-remove {
+            border: none;
+            background: #ff3d00;
+            color: #fff;
+            border-radius: 8px;
+            padding: 0.25rem 0.45rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            margin-left: 0.4rem;
+            height: 28px;
+        }
+
+        .cart-item-remove:hover {
+            background: #e63500;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 800;
+            margin-bottom: 0.95rem;
+            color: #1f2a44;
+        }
+
+        .btn-cart-checkout,
+        .btn-cart-empty {
+            width: 100%;
+            border-radius: 10px;
+            padding: 0.72rem 0;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .btn-cart-checkout {
+            background: #ff9800;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-cart-empty {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        /* Shipping Info Button in Cart */
+        .cart-shipping-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: transparent;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            color: #666;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-shipping-info:hover {
+            background: #f8f9fa;
+            border-color: #ff9800;
+            color: #ff9800;
+        }
+
+        .cart-shipping-info svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: translateY(15px) scale(0.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .shipping-info-backdrop {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(4, 13, 28, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 310;
+        }
+
+        .shipping-info-backdrop.active {
+            display: flex;
+        }
+
+        .shipping-info-modal {
+            width: min(92%, 600px);
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 24px 45px rgba(0, 0, 0, 0.35);
+            padding: 1.5rem;
+            animation: modalPop 0.22s ease;
+            overflow-y: auto;
+            max-height: 85vh;
+        }
+
+        .shipping-info-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 1rem;
+        }
+
+        .shipping-info-header h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin: 0;
+            color: #1f2a44;
+        }
+
+        .shipping-info-close {
+            border: none;
+            background: transparent;
+            font-size: 1.35rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .shipping-options {
+            margin-bottom: 1.5rem;
+        }
+
+        .shipping-option {
+            padding: 1rem;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .shipping-option:hover {
+            border-color: #ff9800;
+            background-color: #fff8f0;
+        }
+
+        .shipping-option-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #1f2a44;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .shipping-option-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .shipping-option-icon svg {
+            color: #ff9800;
+        }
+
+        .shipping-option-details {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .shipping-option-price {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ff6400;
+        }
+
+        .shipping-faq {
+            background-color: #f9f9ff;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .shipping-faq-item {
+            margin-bottom: 0.8rem;
+        }
+
+        .shipping-faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .shipping-faq-question {
+            font-weight: 700;
+            color: #1f2a44;
+            margin-bottom: 0.3rem;
+        }
+
+        .shipping-faq-answer {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .category-selection-backdrop {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(4, 13, 28, 0.85);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 400;
+        }
+
+        .category-selection-backdrop.active {
+            display: flex;
+        }
+
+        .category-selection-modal {
+            width: min(92%, 700px);
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            padding: 2.5rem 1.5rem;
+            animation: modalPop 0.25s ease;
+            text-align: center;
+        }
+
+        .category-selection-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: #1f2a44;
+        }
+
+        .category-selection-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .category-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.8rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 14px;
+            background-color: #f9f9ff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-option:hover {
+            border-color: #ff9800;
+            background-color: #fff8f0;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(255, 152, 0, 0.2);
+        }
+
+        .category-option-icon {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-option-icon svg {
+            color: #1f2a44;
+        }
+
+        .category-option-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #1f2a44;
+        }
+
+        .mini-categories-section {
+            padding: 1.5rem 0;
+            background-color: #f7f8fb;
+        }
+
+        .mini-categories-container {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            scroll-behavior: smooth;
+        }
+
+        .mini-categories-container::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .mini-categories-container::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .mini-categories-container::-webkit-scrollbar-thumb {
+            background: #ff9800;
+            border-radius: 10px;
+        }
+
+        .mini-categories-container::-webkit-scrollbar-thumb:hover {
+            background: #ff7600;
+        }
+
+        .mini-category-card {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.55rem 1rem;
+            border: 1.5px solid #ddd;
+            border-radius: 20px;
+            background-color: #fff;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1f2a44;
+        }
+
+        .mini-category-card:hover {
+            border-color: #ff9800;
+            background-color: #fff8f0;
+            transform: scale(1.05);
+        }
+
+        .mini-category-card.active {
+            background-color: #ff9800;
+            color: #fff;
+            border-color: #ff9800;
+        }
+
+        .mini-category-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mini-category-icon svg {
+            color: #1f2a44;
+        }
+
+        /* Success Order Modal Styles */
+        .success-order-backdrop {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(4, 13, 28, 0.75);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 600;
+        }
+
+        .success-order-backdrop.active {
+            display: flex;
+        }
+
+        .success-order-modal {
+            width: min(90%, 500px);
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            padding: 2rem 1.5rem;
+            animation: scaleIn 0.4s ease;
+            text-align: center;
+            position: relative;
+        }
+
+        .success-order-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .success-order-icon svg {
+            width: 50px;
+            height: 50px;
+            color: #fff;
+        }
+
+        .success-order-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1f2a44;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-order-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .success-order-details {
+            background-color: #f9f9ff;
+            border-radius: 12px;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            border-left: 4px solid #4caf50;
+        }
+
+        .success-order-detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .success-order-detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .success-order-detail-label {
+            font-size: 0.95rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .success-order-detail-value {
+            font-size: 1rem;
+            color: #1f2a44;
+            font-weight: 700;
+        }
+
+        .success-order-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-success-close {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .btn-success-close:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-success-whatsapp {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .btn-success-whatsapp:hover {
+            background-color: #1fae52;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-success-continue {
+            background-color: #fff;
+            color: #4caf50;
+            border: 2px solid #4caf50;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .btn-success-continue:hover {
+            background-color: #f0f8f5;
+            transform: translateY(-2px);
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .success-order-actions {
+                flex-direction: column;
+            }
+
+            .btn-success-close,
+            .btn-success-continue {
+                width: 100%;
+                min-width: auto;
+            }
+        }
+
+        /* Cart Notification Styles */
+        .cart-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+            display: none;
+            align-items: center;
+            gap: 0.75rem;
+            z-index: 1000;
+            animation: slideInRight 0.3s ease, fadeOut 0.3s ease 3s forwards;
+            max-width: 350px;
+            font-weight: 600;
+        }
+
+        .cart-notification.show {
+            display: flex;
+        }
+
+        .cart-notification-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .cart-notification-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .cart-notification-content {
+            flex: 1;
+        }
+
+        .cart-notification-title {
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .cart-notification-message {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .cart-notification-close {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s ease;
+        }
+
+        .cart-notification-close:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cart-notification {
+                left: 20px;
+                right: 20px;
+                max-width: none;
+            }
+        }
+
+        /* Mobile Header Styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 0;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .logo-img {
+                width: 28px;
+                height: 28px;
+            }
+
+            .cart-button {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .cart-button svg {
+                width: 1rem;
+                height: 1rem;
+            }
+
+            .cart-badge {
+                width: 1rem;
+                height: 1rem;
+                font-size: 0.6rem;
+                top: -0.2rem;
+                right: -0.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 0.6rem 0;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+                gap: 0.4rem;
+            }
+
+            .logo-img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .cart-button {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+
+            .cart-button svg {
+                width: 0.9rem;
+                height: 0.9rem;
+            }
+
+            .cart-badge {
+                width: 0.9rem;
+                height: 0.9rem;
+                font-size: 0.55rem;
+                top: -0.15rem;
+                right: -0.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="logo.png" alt="Good life logo" class="logo-img" />
+                <span class="logo-text">Goodlife<span>Games</span></span>
+            </div>
+            <nav class="nav">
+                <a href="#">Home</a>
+                <a href="#products">Products</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+            </nav>
+            <button class="install-app-button" id="installAppBtn" aria-label="Install app" style="display: none;">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20">
+                    <path fill="currentColor"
+                        d="M16 2H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 18H9V4h6v16z" />
+                    <path fill="currentColor" d="M12 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+                <span>Install App</span>
+            </button>
+            <button class="cart-button" aria-label="View cart">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path
+                        d="M7 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2h4l1.7 10.2a2 2 0 0 1-1.9 2.3H5.2a2 2 0 0 1-1.9-2.3L5 4h2zm2 0h6v10h8.3L19.5 5H9V4zm-1 14a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm10 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                </svg>
+                <span class="cart-badge">5</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" id="hero">
+            <div class="hero-grid">
+                <div>
+                    <h1 class="hero-title">Next-level <span class="highlight">Gaming</span> and<br />Ultimate Console
+                        Gear</h1>
+                    <p class="hero-subtitle">Explore the most powerful consoles, premium accessories and exclusive
+                        gameplay bundles. Fast delivery, warranty and customer support built for gamers.</p>
+                    <div class="hero-actions">
+                        <a href="#products" class="btn btn-primary">Shop Now</a>
+                        <a href="#features" class="btn btn-secondary">See Offers</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mini-categories-section">
+            <div class="container">
+                <div class="mini-categories-container" id="miniCategoriesContainer">
+                    <div class="mini-category-card" data-category="All">
+                        <span class="mini-category-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </span>
+                        <span>All Products</span>
+                    </div>
+
+                    <div class="mini-category-card" data-category="Accessory">
+                        <span class="mini-category-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 1c-1.1 0-2 .9-2 2v8c0 .55-.45 1-1 1H4c-.55 0-1 .45-1 1s.45 1 1 1h5c1.1 0 2-.9 2-2V6c0-.55.45-1 1-1s1 .45 1 1v6c0 1.1.9 2 2 2h5c.55 0 1-.45 1-1s-.45-1-1-1h-5c-.55 0-1-.45-1-1V3c0-1.1-.9-2-2-2z" />
+                            </svg>
+                        </span>
+                        <span>Accessories</span>
+                    </div>
+                    <div class="mini-category-card" data-category="Console">
+                        <span class="mini-category-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H9V8h6v10zm4 0h-2V8h2v10zM7 8h2v10H7V8z" />
+                            </svg>
+                        </span>
+                        <span>Consoles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="products">
+            <h2 class="section-heading">Featured Products</h2>
+            <p class="section-subtitle">Premium console hardware and accessories at competitive prices.</p>
+
+            <div class="products-grid">
+                <article class="card">
+                    <img src="Image/P3 Controller 3 Black.jpg" alt="Accessory">
+                    <div class="card-body">
+                        <div class="product-category">Accessory</div>
+                        <div class="product-title">P3 Controller 3 Black</div>
+                        <div class="product-price">₦9,000</div>
+                        <div class="product-description">High-performance Black Used Controller.</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Wireless Controller 3 ( Black).jpeg" alt="Wireless controller">
+                    <div class="card-body">
+                        <div class="product-category">Accessory</div>
+                        <div class="product-title">Wireless Controller 3 </div>
+                        <div class="product-price">₦9,000</div>
+                        <div class="product-description">Brand New Premium wireless controller designed for comfort,
+                            precision,
+                            and extended gaming sessions.</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Play station 3 controller.jpeg" alt="Wireless controller">
+                    <div class="card-body">
+                        <div class="product-category">Accessory</div>
+                        <div class="product-title">Wireless Controller 3 (Blue)</div>
+                        <div class="product-price">₦9,000</div>
+                        <div class="product-description">Newly released Play Station 4 controller.<br> <b>Color:</b>
+                            Blue</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/P3 Red.jpg" alt="Accessory">
+                    <div class="card-body">
+                        <div class="product-category">Accessory</div>
+                        <div class="product-title">PS 3 Controller (Red)</div>
+                        <div class="product-price">₦9,500</div>
+                        <div class="product-description">High-performance Red Controller.</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Full Set Play Station 4 .jpeg" alt="PlayStation 4 Full Set">
+                    <div class="card-body">
+                        <div class="product-category">Console</div>
+                        <div class="product-title">PlayStation 4 Full Set</div>
+                        <div class="product-price">₦205,000</div>
+                        <div class="product-description"> </div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Full Set play Station 4 pro.jpeg" alt="PlayStation 4 Pro Full Set">
+                    <div class="card-body">
+                        <div class="product-category">Console</div>
+                        <div class="product-title">PlayStation 4 Pro Full Set</div>
+                        <div class="product-price">₦300,000</div>
+                        <div class="product-description">High-performance gaming console with stunning graphics, fast
+                            loading times, and immersive gameplay.</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Full Set Play Station 4 Slim .jpeg" alt="PlayStation 4 Slim Full Set">
+                    <div class="card-body">
+                        <div class="product-category">Console</div>
+                        <div class="product-title">PlayStation 4 Slim Full Set</div>
+                        <div class="product-price">₦280,000</div>
+                        <div class="product-description">High-performance gaming console with stunning graphics, fast
+                            loading times, and immersive gameplay.</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Play Station 4 Controller (Black).jpeg" alt="PlayStation 4 Controller Black">
+                    <div class="card-body">
+                        <div class="product-category">Accessory</div>
+                        <div class="product-title">PlayStation 4 Controller (Black)</div>
+                        <div class="product-price">₦15,000</div>
+                        <div class="product-description">Premium wireless controller designed for comfort, precision,
+                            and extended gaming sessions.</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Play station 4 controller (white).jpeg" alt="PlayStation 4 Controller White">
+                    <div class="card-body">
+                        <div class="product-category">Accessory</div>
+                        <div class="product-title">PlayStation 4 Controller (White)</div>
+                        <div class="product-price">₦15,000</div>
+                        <div class="product-description">Wireless controller designed for comfort, precision,
+                            e.t.c</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Play Station 4 Controller.jpeg" alt="PlayStation 4 Controller">
+                    <div class="card-body">
+                        <div class="product-category">Accessory</div>
+                        <div class="product-title">PlayStation 4 Controller</div>
+                        <div class="product-price">₦15,000</div>
+                        <div class="product-description">Wireless PlayStation 4 controller, Designed with Navy skin.
+                        </div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Gold Controller 4.jpg" alt="PlayStation 4 Controller Gold">
+                    <div class="card-body">
+                        <div class="product-category">Accessory</div>
+                        <div class="product-title">PlayStation 4 Controller (Gold)</div>
+                        <div class="product-price">₦15,500</div>
+                        <div class="product-description">Premium wireless controller 4 designed for comfort with Golden
+                            skin, precision,
+                            and extended gaming sessions.</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Play Station 4 pro.jpg" alt="PlayStation 4 Pro">
+                    <div class="card-body">
+                        <div class="product-category">Console</div>
+                        <div class="product-title">PlayStation 4 Pro</div>
+                        <div class="product-price">₦300,000</div>
+                        <div class="product-description">High-performance gaming Brand new console with stunning
+                            graphics, fast
+                            loading times, and immersive gameplay.</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Image/Red Controller 4.jpg" alt="PlayStation 4 Controller Red">
+                    <div class="card-body">
+                        <div class="product-category">Accessory</div>
+                        <div class="product-title">PlayStation 4 Controller (Red)</div>
+                        <div class="product-price">₦16,000</div>
+                        <div class="product-description">Premium wireless controller 4 designed for extended gaming
+                            sessions.</div>
+                        <button class="product-action">Add to Cart</button>
+                    </div>
+                </article>
+
+            </div>
+            <!-- Infinite scroll sentinel -->
+            <div id="scroll-sentinel" style="height: 20px;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-section">
+                    <div class="footer-logo">Good<span>life</span></div>
+                    <p>Premium consoles, accessories and exclusive gameplay experiences for gamers worldwide.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.953 4.57a10 10 0 002.856-3.915 10 10 0 01-2.866.86 4.926 4.926 0 002.16-2.773c-.9.53-1.9.916-2.956 1.124a4.822 4.822 0 00-8.835 4.397 13.74 13.74 0 01-9.977-5.074 4.823 4.823 0 001.497 6.437 4.823 4.823 0 01-2.187-.616v.06a4.823 4.823 0 003.872 4.724 4.822 4.822 0 002.087.082 4.823 4.823 0 004.511 3.35A9.68 9.68 0 010 19.54a13.74 13.74 0 007.429 2.176c8.015 0 12.386-6.648 12.386-12.406 0-.189-.004-.378-.013-.565a8.84 8.84 0 002.16-2.258z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/2349053551328" class="footer-social-link" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.67-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a6.963 6.963 0 00-6.961 6.973 6.968 6.968 0 001.02 3.51l-1.589 5.787 5.917-1.586a6.936 6.936 0 003.33.896h.005c3.837 0 6.97-3.137 6.97-6.974a6.966 6.966 0 00-6.973-6.973m10.39-11.383c-5.255-5.528-13.75-5.528-19.004 0C1.432 6.25.322 15.228 5.61 20.563c2.339 2.47 5.436 3.864 8.697 3.864 3.263 0 6.360-1.395 8.698-3.866 5.289-5.335 4.179-14.313-1.253-19.397z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#products">Shop Products</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Become Affiliate</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#" onclick="openShippingInfo(event)">Shipping Info</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><strong>Email:</strong><br />hello@GoodlifeGames.com</p>
+                    <p><strong>Phone:</strong><br />+234 905 355 1328</p>
+                    <p><strong>Hours:</strong><br />Mon - Fri: 9AM - 6PM<br />Sat - Sun: 10AM - 4PM</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Goodlife Games. All rights reserved. Premium gaming experiences worldwide.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="shipping-info-backdrop" id="shippingInfoModal" aria-hidden="true">
+        <div class="shipping-info-modal" role="dialog" aria-modal="true" aria-labelledby="shippingTitle">
+            <div class="shipping-info-header">
+                <h2 id="shippingTitle">Shipping Information</h2>
+                <button class="shipping-info-close" id="closeShippingInfo" aria-label="Close shipping info">×</button>
+            </div>
+
+            <div class="shipping-options">
+                <div class="shipping-option">
+                    <div class="shipping-option-title">
+                        <span class="shipping-option-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                            </svg>
+                        </span>
+                        Standard Delivery
+                    </div>
+                    <div class="shipping-option-details">
+                        Delivery within 3-5 business days. Shipping fee varies based on your delivery location.
+                    </div>
+                    <div class="shipping-option-price">From ₦1,800</div>
+                </div>
+            </div>
+
+            <div class="shipping-faq">
+                <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.8rem; color: #1f2a44;">Frequently Asked
+                    Questions</h3>
+
+                <div class="shipping-faq-item">
+                    <div class="shipping-faq-question">Do you ship internationally?</div>
+                    <div class="shipping-faq-answer">Currently, we ship within Anambra, Nigeria. Delivery coverage and
+                        fees depend on your exact location.</div>
+                </div>
+
+                <div class="shipping-faq-item">
+                    <div class="shipping-faq-question">Does payment vary by location?</div>
+                    <div class="shipping-faq-answer">Yes. Shipping cost is calculated based on your delivery address, so
+                        your total payment may vary depending on how far your location is from our dispatch area.</div>
+                </div>
+
+                <div class="shipping-faq-item">
+                    <div class="shipping-faq-question">What's your return policy?</div>
+                    <div class="shipping-faq-answer">30-day money-back guarantee on all products. Free returns on
+                        defective items.</div>
+                </div>
+
+                <div class="shipping-faq-item">
+                    <div class="shipping-faq-question">Can I change my order after purchase?</div>
+                    <div class="shipping-faq-answer">Contact us within 30 minutes of purchase to make changes or cancel.
+                    </div>
+                </div>
+
+                <div class="shipping-faq-item">
+                    <div class="shipping-faq-question">How can I track my order?</div>
+                    <div class="shipping-faq-answer">We'll send you a tracking link via WhatsApp or email after
+                        confirmation.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-selection-backdrop" id="categorySelectionModal" aria-hidden="true">
+        <div class="category-selection-modal" role="dialog" aria-modal="true" aria-labelledby="categoryTitle">
+            <h2 class="category-selection-title" id="categoryTitle">What are you looking for?</h2>
+            <p class="category-selection-subtitle">Choose a category to get started</p>
+            <div class="category-options">
+
+                <div class="category-option" data-category="Accessory">
+                    <div class="category-option-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 1c-1.1 0-2 .9-2 2v8c0 .55-.45 1-1 1H4c-.55 0-1 .45-1 1s.45 1 1 1h5c1.1 0 2-.9 2-2V6c0-.55.45-1 1-1s1 .45 1 1v6c0 1.1.9 2 2 2h5c.55 0 1-.45 1-1s-.45-1-1-1h-5c-.55 0-1-.45-1-1V3c0-1.1-.9-2-2-2z" />
+                        </svg>
+                    </div>
+                    <div class="category-option-title">Accessories</div>
+                </div>
+                <div class="category-option" data-category="Console">
+                    <div class="category-option-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H9V8h6v10zm4 0h-2V8h2v10zM7 8h2v10H7V8z" />
+                        </svg>
+                    </div>
+                    <div class="category-option-title">Consoles</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-modal-backdrop" id="cartModal" aria-hidden="true">
+        <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+            <div class="cart-modal-header">
+                <h3 id="cartTitle">Your Cart</h3>
+                <button class="cart-close" id="closeCart" aria-label="Close cart modal">×</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p style="margin: 0.5rem; color: #777;"><em>Your cart is empty</em></p>
+            </div>
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotalValue">₦0</span>
+            </div>
+            <button class="cart-shipping-info" id="cartShippingInfo" aria-label="View shipping information">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                </svg>
+                <span>Shipping Info</span>
+            </button>
+            <button class="btn-cart-checkout" onclick="checkoutToWhatsApp()">Checkout</button>
+            <button class="btn-cart-empty" id="emptyCart">Clear Cart</button>
+        </div>
+    </div>
+
+    <div class="quick-view-backdrop" id="quickViewBackdrop" aria-hidden="true">
+        <div class="quick-view-modal" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle">
+            <div class="cart-modal-header">
+                <h3 id="quickViewTitle">Quick View</h3>
+                <button class="cart-close" id="closeQuickView" aria-label="Close quick view">×</button>
+            </div>
+            <div class="quick-view-grid">
+                <img src="" alt="Quick view product" id="quickViewImage" />
+                <div class="quick-view-content">
+                    <h4 id="quickViewName"></h4>
+                    <p id="quickViewCategory"></p>
+                    <p class="quick-view-price" id="quickViewPrice"></p>
+                    <p id="quickViewDescription">Experience the ultimate performance with this gaming accessory.
+                        Optimized for high speed, low latency and precision control.</p>
+                    <div class="quick-view-actions">
+                        <button class="btn btn-primary" id="quickViewAdd">Add to Cart</button>
+                        <button class="btn btn-secondary" id="quickViewClose">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/2349053551328?text=Hello%20Good%20life%2C%20I%20need%20help%20with%20my%20order"
+        target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+
+    <!-- Loader Overlay -->
+    <div class="loader-overlay" id="loaderOverlay">
+        <div class="loader">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Let's Get the game started...</div>
+        </div>
+    </div>
+
+    <!-- Success Order Modal -->
+    <div class="success-order-backdrop" id="successOrderModal" aria-hidden="true">
+        <div class="success-order-modal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+            <div class="success-order-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+            </div>
+
+            <h2 class="success-order-title" id="successTitle">Order Placed Successfully!</h2>
+
+            <p class="success-order-subtitle">
+                Your order will be completed via WhatsApp. We'll confirm your order details shortly and process
+                your payment.
+            </p>
+
+            <div class="success-order-details">
+                <div class="success-order-detail-item">
+                    <span class="success-order-detail-label">Items Ordered:</span>
+                    <span class="success-order-detail-value" id="successOrderItems">0</span>
+                </div>
+                <div class="success-order-detail-item">
+                    <span class="success-order-detail-label">Total Amount:</span>
+                    <span class="success-order-detail-value" id="successOrderTotal">₦0</span>
+                </div>
+                <div class="success-order-detail-item">
+                    <span class="success-order-detail-label">Status:</span>
+                    <span class="success-order-detail-value" style="color: #4caf50;">Pending Confirmation</span>
+                </div>
+            </div>
+
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem;">
+                💡 <strong>Tip:</strong> Keep an eye on your WhatsApp for updates on your order.
+            </p>
+
+            <div class="success-order-actions">
+                <button class="btn-success-whatsapp" id="goToWhatsApp">Go to WhatsApp</button>
+                <button class="btn-success-continue" id="continueShopping">Continue Shopping</button>
+                <button class="btn-success-close" id="closeSuccessOrder">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Notification -->
+    <div class="cart-notification" id="cartNotification">
+        <div class="cart-notification-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+            </svg>
+        </div>
+        <div class="cart-notification-content">
+            <div class="cart-notification-title" id="notificationTitle">Item Added!</div>
+            <div class="cart-notification-message" id="notificationMessage">Product has been added to your cart</div>
+        </div>
+        <button class="cart-notification-close" id="closeNotification" aria-label="Close notification">×</button>
+    </div>
+
+    <!-- Welcome Modal -->
+    <div class="welcome-backdrop" id="welcomeModal">
+        <div class="welcome-modal">
+            <button class="welcome-close" id="closeWelcome" aria-label="Close welcome modal">×</button>
+
+            <div class="welcome-icon">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 10 19.5 10s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                </svg>
+            </div>
+
+            <h2 class="welcome-title">Welcome to Good life Games!</h2>
+
+            <p class="welcome-subtitle">
+                Discover premium gaming consoles, accessories, and exclusive gameplay experiences.
+                Fast delivery, warranty, and exceptional customer support.
+            </p>
+
+            <div class="welcome-features">
+                <div class="welcome-feature">
+                    <div class="welcome-feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H9V8h6v10zm4 0h-2V8h2v10zM7 8h2v10H7V8z" />
+                        </svg>
+                    </div>
+                    <div class="welcome-feature-text">Gaming Consoles</div>
+                </div>
+                <div class="welcome-feature">
+                    <div class="welcome-feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 1c-1.1 0-2 .9-2 2v8c0 .55-.45 1-1 1H4c-.55 0-1 .45-1 1s.45 1 1 1h5c1.1 0 2-.9 2-2V6c0-.55.45-1 1-1s1 .45 1 1v6c0 1.1.9 2 2 2h5c.55 0 1-.45 1-1s-.45-1-1-1h-5c-.55 0-1-.45-1-1V3c0-1.1-.9-2-2-2z" />
+                        </svg>
+                    </div>
+                    <div class="welcome-feature-text">Accessories</div>
+                </div>
+                <div class="welcome-feature">
+                    <div class="welcome-feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                    </div>
+                    <div class="welcome-feature-text">Gameplays</div>
+                </div>
+                <div class="welcome-feature">
+                    <div class="welcome-feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                        </svg>
+                    </div>
+                    <div class="welcome-feature-text">Fast Delivery</div>
+                </div>
+            </div>
+
+            <button class="welcome-button" id="startShopping">Start Shopping</button>
+        </div>
+    </div>
+
+    <script>
+        // Loader Functions
+        const loaderOverlay = document.getElementById('loaderOverlay');
+
+        function showLoader() {
+            loaderOverlay.classList.add('active');
+        }
+
+        function hideLoader() {
+            loaderOverlay.classList.remove('active');
+        }
+
+        // Success Order Modal Functions
+        const successOrderBackdrop = document.getElementById('successOrderModal');
+        const closeSuccessOrder = document.getElementById('closeSuccessOrder');
+        const continueShoppingBtn = document.getElementById('continueShopping');
+        const successOrderItems = document.getElementById('successOrderItems');
+        const successOrderTotal = document.getElementById('successOrderTotal');
+
+        function openSuccessOrderModal(cartItems, total) {
+            // Populate order details
+            successOrderItems.innerHTML = `<strong>${cartItems.length}</strong> item${cartItems.length !== 1 ? 's' : ''} ordered`;
+            successOrderTotal.textContent = formatCurrency(total);
+
+            successOrderBackdrop.classList.add('active');
+            successOrderBackdrop.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeSuccessOrderModal() {
+            successOrderBackdrop.classList.remove('active');
+            successOrderBackdrop.setAttribute('aria-hidden', 'true');
+        }
+
+        const goToWhatsAppBtn = document.getElementById('goToWhatsApp');
+
+        // PWA Install Functionality
+        let deferredPrompt;
+        const installAppBtn = document.getElementById('installAppBtn');
+        let isAppInstalled = false;
+
+        // Check if app is already installed
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            isAppInstalled = true;
+        }
+
+        window.addEventListener('beforeinstallprompt', (event) => {
+            event.preventDefault();
+            deferredPrompt = event;
+            if (!isAppInstalled && installAppBtn) {
+                installAppBtn.style.display = 'inline-flex';
+            }
+        });
+
+        if (installAppBtn) {
+            installAppBtn.addEventListener('click', async () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    console.log('User response to the install prompt: ' + outcome);
+                    deferredPrompt = null;
+                    if (outcome === 'accepted') {
+                        installAppBtn.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA was installed successfully');
+            isAppInstalled = true;
+            if (installAppBtn) {
+                installAppBtn.style.display = 'none';
+            }
+            showCartNotification('App Installed!', 'Goodlife Games is now installed on your device');
+        });
+
+        closeSuccessOrder.addEventListener('click', closeSuccessOrderModal);
+
+        goToWhatsAppBtn.addEventListener('click', () => {
+            const whatsappPhone = '2349053551328';
+            const whatsappURL = `https://wa.me/${whatsappPhone}`;
+            window.open(whatsappURL, '_blank');
+        });
+
+        continueShoppingBtn.addEventListener('click', () => {
+            closeSuccessOrderModal();
+            cart = [];
+            renderCart();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        successOrderBackdrop.addEventListener('click', (event) => {
+            if (event.target === successOrderBackdrop) {
+                closeSuccessOrderModal();
+            }
+        });
+
+        // Cart Notification Functions
+        const cartNotification = document.getElementById('cartNotification');
+        const notificationTitle = document.getElementById('notificationTitle');
+        const notificationMessage = document.getElementById('notificationMessage');
+        const closeNotification = document.getElementById('closeNotification');
+
+        function showCartNotification(title, message) {
+            notificationTitle.textContent = title;
+            notificationMessage.textContent = message;
+            cartNotification.classList.add('show');
+
+            // Auto-hide after 3 seconds
+            setTimeout(() => {
+                hideCartNotification();
+            }, 3000);
+        }
+
+        function hideCartNotification() {
+            cartNotification.classList.remove('show');
+        }
+
+        closeNotification.addEventListener('click', hideCartNotification);
+
+        // Welcome Modal Functions
+        const welcomeModal = document.getElementById('welcomeModal');
+        const closeWelcome = document.getElementById('closeWelcome');
+        const startShopping = document.getElementById('startShopping');
+
+        function openWelcomeModal() {
+            welcomeModal.classList.add('active');
+            welcomeModal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeWelcomeModal() {
+            welcomeModal.classList.remove('active');
+            welcomeModal.setAttribute('aria-hidden', 'true');
+            sessionStorage.setItem('welcomeShown', 'true');
+        }
+
+        closeWelcome.addEventListener('click', closeWelcomeModal);
+        startShopping.addEventListener('click', closeWelcomeModal);
+
+        welcomeModal.addEventListener('click', (event) => {
+            if (event.target === welcomeModal) {
+                closeWelcomeModal();
+            }
+        });
+
+        // Show welcome modal on first visit
+        if (!sessionStorage.getItem('welcomeShown')) {
+            // Show loader first, then welcome modal
+            showLoader();
+            setTimeout(() => {
+                hideLoader();
+                openWelcomeModal();
+            }, 5000); // Show loader for 5 seconds
+        }
+
+        const cartBtn = document.querySelector('.cart-button');
+        const cartModal = document.getElementById('cartModal');
+        const closeCart = document.getElementById('closeCart');
+        const emptyCart = document.getElementById('emptyCart');
+        const cartItemsContainer = document.getElementById('cartItems');
+        const cartTotalValue = document.getElementById('cartTotalValue');
+        const cartBadge = document.querySelector('.cart-badge');
+
+        let cart = [];
+
+        function formatCurrency(amount) {
+            return '₦' + amount.toLocaleString();
+        }
+
+        function renderCart() {
+            cartItemsContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p style="margin: 0.5rem; color: #777;"><em>Your cart is empty</em></p>';
+                cartTotalValue.textContent = '₦0';
+                cartBadge.textContent = '0';
+                return;
+            }
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                const itemEl = document.createElement('div');
+                itemEl.className = 'cart-item';
+                itemEl.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" />
+                    <div class="cart-item-details">
+                        <p>${item.name}</p>
+                        <p class="product-category">${item.category}</p>
+                    </div>
+                    <p class="price">${formatCurrency(item.price)}</p>
+                    <button class="cart-item-remove" data-index="${index}" aria-label="Remove ${item.name}">Remove</button>
+                `;
+
+                const cartImg = itemEl.querySelector('img');
+                cartImg.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    openQuickView({
+                        name: item.name,
+                        price: item.price,
+                        image: item.image,
+                        category: item.category,
+                        description: item.description,
+                    });
+                });
+
+                const removeBtn = itemEl.querySelector('.cart-item-remove');
+                removeBtn.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    cart.splice(index, 1);
+                    renderCart();
+                });
+
+                cartItemsContainer.appendChild(itemEl);
+            });
+
+            cartTotalValue.textContent = formatCurrency(total);
+            cartBadge.textContent = cart.length;
+        }
+
+        function openCart() {
+            cartModal.classList.add('active');
+            cartModal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeCartModal() {
+            cartModal.classList.remove('active');
+            cartModal.setAttribute('aria-hidden', 'true');
+        }
+
+        function addToCart(name, price, image, category, description) {
+            cart.push({ name, price, image, category, description });
+            renderCart();
+        }
+
+        function checkoutToWhatsApp() {
+            if (cart.length === 0) {
+                alert('Your cart is empty. Please add items before checkout.');
+                return;
+            }
+
+            showLoader();
+
+            let message = 'Hi Good life! I would like to purchase the following items:\n\n';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                message += `${index + 1}. ${item.name} - ${item.category}\n   Price: ₦${item.price.toLocaleString()}\n\n`;
+                total += item.price;
+            });
+
+            message += `Total: ₦${total.toLocaleString()}\n\n`;
+            message += 'Please confirm and proceed with my order.';
+
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappPhone = '2349053551328'; // Your WhatsApp number
+            const whatsappURL = `https://wa.me/${whatsappPhone}?text=${encodedMessage}`;
+
+            // Store cart data before clearing
+            const previousCart = [...cart];
+            const previousTotal = previousCart.reduce((sum, item) => sum + item.price, 0);
+
+            // Open WhatsApp after a brief delay
+            setTimeout(() => {
+                hideLoader();
+                window.open(whatsappURL, '_blank');
+
+                // Show success modal
+                openSuccessOrderModal(previousCart, previousTotal);
+
+                // Clear the cart
+                cart = [];
+                renderCart();
+            }, 5000);
+        }
+
+        const addCartButtons = document.querySelectorAll('.product-action');
+        addCartButtons.forEach((btn) => {
+            btn.addEventListener('click', (event) => {
+                event.preventDefault();
+                const card = btn.closest('.card');
+                const name = card.querySelector('.product-title').textContent;
+                const category = card.querySelector('.product-category')?.textContent || 'Product';
+                const priceRaw = card.querySelector('.product-price').textContent.replace('₦', '').replace(/,/g, '');
+                const price = Number(priceRaw);
+                const image = card.querySelector('img')?.src || '';
+
+                addToCart(name, price, image, category);
+                showCartNotification('Item Added!', `${name} has been added to your cart`);
+            });
+        });
+
+        cartBtn.addEventListener('click', openCart);
+        closeCart.addEventListener('click', closeCartModal);
+
+        cartModal.addEventListener('click', (event) => {
+            if (event.target === cartModal) {
+                closeCartModal();
+            }
+        });
+
+        emptyCart.addEventListener('click', () => {
+            cart = [];
+            renderCart();
+        });
+
+        // Cart Shipping Info Button
+        const cartShippingInfoBtn = document.getElementById('cartShippingInfo');
+        cartShippingInfoBtn.addEventListener('click', openShippingInfo);
+
+        renderCart();
+
+        const quickViewBackdrop = document.getElementById('quickViewBackdrop');
+        const quickViewName = document.getElementById('quickViewName');
+        const quickViewCategory = document.getElementById('quickViewCategory');
+        const quickViewPrice = document.getElementById('quickViewPrice');
+        const quickViewImage = document.getElementById('quickViewImage');
+        const quickViewAdd = document.getElementById('quickViewAdd');
+        const quickViewClose = document.getElementById('quickViewClose');
+        const quickViewDescription = document.getElementById('quickViewDescription');
+
+        let activeQuickItem = null;
+
+        function openQuickView(item) {
+            activeQuickItem = item;
+            quickViewName.textContent = item.name;
+            quickViewCategory.textContent = item.category || 'Product';
+            quickViewPrice.textContent = formatCurrency(item.price);
+            quickViewImage.src = item.image;
+            quickViewImage.alt = item.name;
+            quickViewDescription.textContent = item.description || 'Experience the ultimate performance with this gaming accessory. Optimized for high speed, low latency and precision control.';
+
+            quickViewBackdrop.classList.add('active');
+            quickViewBackdrop.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeQuickView() {
+            quickViewBackdrop.classList.remove('active');
+            quickViewBackdrop.setAttribute('aria-hidden', 'true');
+            activeQuickItem = null;
+        }
+
+        // Shipping Info Modal Functions
+        const shippingInfoModal = document.getElementById('shippingInfoModal');
+        const closeShippingInfo = document.getElementById('closeShippingInfo');
+
+        function openShippingInfo(event) {
+            event.preventDefault();
+            shippingInfoModal.classList.add('active');
+            shippingInfoModal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeShippingInfoModal() {
+            shippingInfoModal.classList.remove('active');
+            shippingInfoModal.setAttribute('aria-hidden', 'true');
+        }
+
+        closeShippingInfo.addEventListener('click', closeShippingInfoModal);
+
+        shippingInfoModal.addEventListener('click', (event) => {
+            if (event.target === shippingInfoModal) {
+                closeShippingInfoModal();
+            }
+        });
+
+        document.querySelectorAll('.card').forEach((card) => {
+            card.addEventListener('click', () => {
+                const name = card.querySelector('.product-title').textContent;
+                const priceRaw = Number(card.querySelector('.product-price').textContent.replace('₦', '').replace(/,/g, ''));
+                const image = card.querySelector('img')?.src || '';
+                const category = card.querySelector('.product-category')?.textContent || 'Product';
+                const description = card.querySelector('.product-description')?.textContent || 'No description available.';
+
+                openQuickView({ name, price: priceRaw, image, category, description });
+            });
+
+            const actionBtn = card.querySelector('.product-action');
+            if (actionBtn) {
+                actionBtn.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                });
+            }
+        });
+
+        quickViewAdd.addEventListener('click', () => {
+            if (activeQuickItem) {
+                addToCart(activeQuickItem.name, activeQuickItem.price, activeQuickItem.image, activeQuickItem.category, activeQuickItem.description);
+                showCartNotification('Item Added!', `${activeQuickItem.name} has been added to your cart`);
+                closeQuickView();
+            }
+        });
+
+        quickViewClose.addEventListener('click', closeQuickView);
+
+        quickViewBackdrop.addEventListener('click', (event) => {
+            if (event.target === quickViewBackdrop) {
+                closeQuickView();
+            }
+        });
+
+        // Category Selection Logic
+        const categorySelectionModal = document.getElementById('categorySelectionModal');
+        const categoryOptions = document.querySelectorAll('.category-option');
+        const miniCategoryCards = document.querySelectorAll('.mini-category-card');
+        let selectedCategory = sessionStorage.getItem('selectedCategory') || 'All';
+
+        function filterProductsByCategory(category) {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card) => {
+                const cardCategory = card.querySelector('.product-category')?.textContent.trim();
+                if (category === 'All' || cardCategory === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update mini category card active state
+            miniCategoryCards.forEach((card) => {
+                if (card.getAttribute('data-category') === category) {
+                    card.classList.add('active');
+                } else {
+                    card.classList.remove('active');
+                }
+            });
+        }
+
+        function openCategorySelection() {
+            categorySelectionModal.classList.add('active');
+            categorySelectionModal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeCategorySelection() {
+            categorySelectionModal.classList.remove('active');
+            categorySelectionModal.setAttribute('aria-hidden', 'true');
+        }
+
+        categoryOptions.forEach((option) => {
+            option.addEventListener('click', () => {
+                const category = option.getAttribute('data-category');
+                selectedCategory = category;
+                sessionStorage.setItem('selectedCategory', category);
+                filterProductsByCategory(category);
+                closeCategorySelection();
+            });
+        });
+
+        // Mini category cards click handlers
+        miniCategoryCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                const category = card.getAttribute('data-category');
+                selectedCategory = category;
+                sessionStorage.setItem('selectedCategory', category);
+                filterProductsByCategory(category);
+            });
+        });
+
+        // Show category selection modal on first visit
+        if (sessionStorage.getItem('selectedCategory') === null) {
+            openCategorySelection();
+        } else {
+            filterProductsByCategory(selectedCategory);
+        }
+
+        // Close modal when clicking outside
+        categorySelectionModal.addEventListener('click', (event) => {
+            if (event.target === categorySelectionModal && selectedCategory) {
+                closeCategorySelection();
+            }
+        });
+
+        // Infinite Scroll Implementation
+        const productsGrid = document.querySelector('.products-grid');
+        const scrollSentinel = document.getElementById('scroll-sentinel');
+        let isLoading = false;
+
+        // Function to get all current product cards
+        function getCurrentProducts() {
+            return Array.from(productsGrid.querySelectorAll('.card'));
+        }
+
+        // Function to create a duplicate of a product card
+        function duplicateProductCard(originalCard) {
+            const clone = originalCard.cloneNode(true);
+
+            // Re-attach event listeners to the cloned card
+            clone.addEventListener('click', () => {
+                const name = clone.querySelector('.product-title').textContent;
+                const priceRaw = Number(clone.querySelector('.product-price').textContent.replace('₦', '').replace(/,/g, ''));
+                const image = clone.querySelector('img')?.src || '';
+                const category = clone.querySelector('.product-category')?.textContent || 'Product';
+                const description = clone.querySelector('.product-description')?.textContent || 'No description available.';
+
+                openQuickView({ name, price: priceRaw, image, category, description });
+            });
+
+            const actionBtn = clone.querySelector('.product-action');
+            if (actionBtn) {
+                actionBtn.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    const name = clone.querySelector('.product-title').textContent;
+                    const priceRaw = Number(clone.querySelector('.product-price').textContent.replace('₦', '').replace(/,/g, ''));
+                    const image = clone.querySelector('img')?.src || '';
+                    const category = clone.querySelector('.product-category')?.textContent || 'Product';
+                    const description = clone.querySelector('.product-description')?.textContent || 'No description available.';
+                    addToCart(name, priceRaw, image, category, description);
+                    showCartNotification('Item Added!', `${name} has been added to your cart`);
+                });
+            }
+
+            return clone;
+        }
+
+        // Function to load more products
+        function loadMoreProducts() {
+            if (isLoading) return;
+            isLoading = true;
+
+            // Get current products
+            const currentProducts = getCurrentProducts();
+
+            // Duplicate all current products
+            currentProducts.forEach(product => {
+                const duplicate = duplicateProductCard(product);
+                productsGrid.appendChild(duplicate);
+            });
+
+            // Small delay to prevent rapid firing
+            setTimeout(() => {
+                isLoading = false;
+            }, 500);
+        }
+
+        // Intersection Observer for infinite scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadMoreProducts();
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '100px',
+            threshold: 0.1
+        });
+
+        // Start observing the sentinel element
+        observer.observe(scrollSentinel);
+    </script>
+
+    <body>
+        <header>
+            <div class="container header-inner">
+                <div class="logo">
+                    <img src="logo.png" alt="Good life logo" class="logo-img" />
+                    <span class="logo-text">Goodlife<span>Games</span></span>
+                </div>
+                <nav class="nav">
+                    <a href="#">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                </nav>
+                <button class="cart-button" aria-label="View cart">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                            d="M7 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2h4l1.7 10.2a2 2 0 0 1-1.9 2.3H5.2a2 2 0 0 1-1.9-2.3L5 4h2zm2 0h6v10h8.3L19.5 5H9V4zm-1 14a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm10 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                    </svg>
+                    <span class="cart-badge">5</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="hero" id="hero">
+                <div class="hero-grid">
+                    <div>
+                        <h1 class="hero-title">Next-level <span class="highlight">Gaming</span> and<br />Ultimate
+                            Console
+                            Gear</h1>
+                        <p class="hero-subtitle">Explore the most powerful consoles And premium accessories. Fast
+                            delivery, warranty and customer support built for gamers.</p>
+                        <div class="hero-actions">
+                            <a href="#products" class="btn btn-primary">Shop Now</a>
+                            <a href="#features" class="btn btn-secondary">See Offers</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mini-categories-section">
+                <div class="container">
+                    <div class="mini-categories-container" id="miniCategoriesContainer">
+                        <div class="mini-category-card" data-category="All">
+                            <span class="mini-category-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </span>
+                            <span>All Products</span>
+                        </div>
+                        <div class="mini-category-card" data-category="Gameplay">
+                            <span class="mini-category-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 10 19.5 10s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                                </svg>
+                            </span>
+                            <span>Gameplays</span>
+                        </div>
+                        <div class="mini-category-card" data-category="Accessory">
+                            <span class="mini-category-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 1c-1.1 0-2 .9-2 2v8c0 .55-.45 1-1 1H4c-.55 0-1 .45-1 1s.45 1 1 1h5c1.1 0 2-.9 2-2V6c0-.55.45-1 1-1s1 .45 1 1v6c0 1.1.9 2 2 2h5c.55 0 1-.45 1-1s-.45-1-1-1h-5c-.55 0-1-.45-1-1V3c0-1.1-.9-2-2-2z" />
+                                </svg>
+                            </span>
+                            <span>Accessories</span>
+                        </div>
+                        <div class="mini-category-card" data-category="Console">
+                            <span class="mini-category-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H9V8h6v10zm4 0h-2V8h2v10zM7 8h2v10H7V8z" />
+                                </svg>
+                            </span>
+                            <span>Consoles</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="products" id="products">
+                <h2 class="section-heading">Featured Products</h2>
+                <p class="section-subtitle">Premium console hardware and accessories at competitive prices.</p>
+
+                <div class="products-grid">
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1613413871489-38f1e0f3e83f?auto=format&fit=crop&w=800&q=80"
+                            alt="Game console">
+                        <div class="card-body">
+                            <div class="product-category">Console</div>
+                            <div class="product-title">Vortex 7+ Gaming Console</div>
+                            <div class="product-price">₦800,000</div>
+                            <button class="product-action">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?auto=format&fit=crop&w=800&q=80"
+                            alt="Wireless controller">
+                        <div class="card-body">
+                            <div class="product-category">Accessory</div>
+                            <div class="product-title">EdgeForce Wireless Controller</div>
+                            <div class="product-price">₦128,000</div>
+                            <button class="product-action">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1620901279554-15834e111b77?auto=format&fit=crop&w=800&q=80"
+                            alt="Gaming headset">
+                        <div class="card-body">
+                            <div class="product-category">Accessory</div>
+                            <div class="product-title">AuraSound Pro Headset</div>
+                            <div class="product-price">₦192,000</div>
+                            <button class="product-action">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1619387301231-09128e2a3ae7?auto=format&fit=crop&w=800&q=80"
+                            alt="Accessory">
+                        <div class="card-body">
+                            <div class="product-category">Gameplay</div>
+                            <div class="product-title">Champion Battle Bundle</div>
+                            <div class="product-price">₦272,000</div>
+                            <button class="product-action">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-section">
+                        <div class="footer-logo">Good<span>life</span></div>
+                        <p>Premium consoles, accessories and exclusive gameplay experiences for gamers worldwide.</p>
+                        <div class="footer-socials">
+                            <a href="#" class="footer-social-link" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="footer-social-link" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 002.856-3.915 10 10 0 01-2.866.86 4.926 4.926 0 002.16-2.773c-.9.53-1.9.916-2.956 1.124a4.822 4.822 0 00-8.835 4.397 13.74 13.74 0 01-9.977-5.074 4.823 4.823 0 001.497 6.437 4.823 4.823 0 01-2.187-.616v.06a4.823 4.823 0 003.872 4.724 4.822 4.822 0 002.087.082 4.823 4.823 0 004.511 3.35A9.68 9.68 0 010 19.54a13.74 13.74 0 007.429 2.176c8.015 0 12.386-6.648 12.386-12.406 0-.189-.004-.378-.013-.565a8.84 8.84 0 002.16-2.258z" />
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/2349053551328" class="footer-social-link" aria-label="WhatsApp">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.67-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a6.963 6.963 0 00-6.961 6.973 6.968 6.968 0 001.02 3.51l-1.589 5.787 5.917-1.586a6.936 6.936 0 003.33.896h.005c3.837 0 6.97-3.137 6.97-6.974a6.966 6.966 0 00-6.973-6.973m10.39-11.383c-5.255-5.528-13.75-5.528-19.004 0C1.432 6.25.322 15.228 5.61 20.563c2.339 2.47 5.436 3.864 8.697 3.864 3.263 0 6.360-1.395 8.698-3.866 5.289-5.335 4.179-14.313-1.253-19.397z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#products">Shop Products</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">Become Affiliate</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Customer Support</h3>
+                        <ul>
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Returns & Refunds</a></li>
+                            <li><a href="#" onclick="openShippingInfo(event)">Shipping Info</a></li>
+                            <li><a href="#">Warranty</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Contact Info</h3>
+                        <p><strong>Email:</strong><br />hello@GoodlifeGames.com</p>
+                        <p><strong>Phone:</strong><br />+234 905 355 1328</p>
+                        <p><strong>Hours:</strong><br />Mon - Fri: 9AM - 6PM<br />Sat - Sun: 10AM - 4PM</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Goodlife Games. All rights reserved. Premium gaming experiences worldwide.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="https://wa.me/2349053551328?text=Hello%20Good%20life%2C%20I%20need%20help%20with%20my%20order"
+            target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        </a>
+
+        <!-- Loader Overlay -->
+        <div class="loader-overlay" id="loaderOverlay">
+            <div class="loader">
+                <div class="loader-spinner"></div>
+                <div class="loader-text">Let's Get the game started...</div>
+            </div>
+        </div>
+
+        <!-- Cart Notification -->
+        <div class="cart-notification" id="cartNotification">
+            <div class="cart-notification-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+            </div>
+            <div class="cart-notification-content">
+                <div class="cart-notification-title" id="notificationTitle">Item Added!</div>
+                <div class="cart-notification-message" id="notificationMessage">Product has been added to your cart
+                </div>
+            </div>
+            <button class="cart-notification-close" id="closeNotification" aria-label="Close notification">×</button>
+        </div>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('sw.js')
+                        .then(registration => {
+                            console.log('Service Worker registered successfully:', registration);
+                        })
+                        .catch(error => {
+                            console.log('Service Worker registration failed:', error);
+                        });
+                });
+            }
+        </script>
+    </body>
+
+</html>
